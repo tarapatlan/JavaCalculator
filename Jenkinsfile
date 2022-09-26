@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'docker build -t tarapatlan/tomcat .'
+                sh 'sudo docker build -t tarapatlan/tomcat .'
             }
         }
     }
