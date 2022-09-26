@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'mvn package'
+       
             }
         }
         stage('Test') {
@@ -16,6 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'docker build -t tarapatlan/tomcat .'
             }
         }
     }
